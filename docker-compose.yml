@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gollum_multirender:
+    image: 'matuck/gollum-multirender-omniauth'
+    user: '1000:1000'
+    volumes:
+      - 'wiki:/data'
+    ports:
+      - '4567:4567'
+volumes:
+  wiki:
