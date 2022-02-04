@@ -14,8 +14,11 @@ apt-get -y upgrade
 apt-get -y install --no-install-recommends unzip wget curl build-essential ruby ruby-dev python python-docutils ruby-bundler libicu-dev libreadline-dev libssl-dev zlib1g-dev git-core git libldap2-dev libidn11-dev cmake
 
 
-gem install gollum redcarpet github-markdown asciidoctor creole wikicloth org-ruby RedCloth omnigollum omniauth-identity omniauth-ldap omniauth-twitter omniauth-http-basic omniauth-github 
+gem install --no-document gollum redcarpet github-markdown asciidoctor creole wikicloth org-ruby RedCloth omnigollum omniauth-identity omniauth-ldap omniauth-twitter omniauth-http-basic omniauth-github 
 
+
+apt-get purge -y build-essential cmake
+apt -y autoremove 
 mkdir /data
 
 apt-get clean
